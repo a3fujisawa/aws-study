@@ -39,3 +39,57 @@ Dependency Installed:
   libuv.x86_64 1:0.10.34-1.el6                                                                                                                         
 
 Complete!
+
+[ec2-user@ip-172-31-25-251 ~]$ sudo yum -y --enablerepo=epel install nodejs
+Loaded plugins: priorities, update-motd, upgrade-helper
+epel/x86_64/metalink                                                                                                            | 5.1 kB  00:00:00
+epel                                                                                                                            | 4.3 kB  00:00:00
+(1/3): epel/x86_64/group_gz                                                                                                     | 150 kB  00:00:00
+(2/3): epel/x86_64/updateinfo                                                                                                   | 760 kB  00:00:00
+(3/3): epel/x86_64/primary_db
+
+Dependencies Resolved
+
+=======================================================================================================================================================
+ Package                           Arch                              Version                                     Repository                       Size
+=======================================================================================================================================================
+Installing:
+ nodejs                            x86_64                            0.10.48-3.el6                               epel                            2.1 M
+Installing for dependencies:
+ libuv                             x86_64                            1:0.10.34-1.el6                             epel                             57 k
+
+Transaction Summary
+=======================================================================================================================================================
+Install  1 Package (+1 Dependent package)
+
+Total download size: 2.2 M
+Installed size: 7.2 M
+Downloading packages:
+warning: /var/cache/yum/x86_64/latest/epel/packages/libuv-0.10.34-1.el6.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 0608b895: NOKEY
+Public key for libuv-0.10.34-1.el6.x86_64.rpm is not installed
+(1/2): libuv-0.10.34-1.el6.x86_64.rpm                                                                                           |  57 kB  00:00:00
+(2/2): nodejs-0.10.48-3.el6.x86_64.rpm                                                                                          | 2.1 MB  00:00:00
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                  5.9 MB/s | 2.2 MB  00:00:00
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+Importing GPG key 0x0608B895:
+ Userid     : "EPEL (6) <epel@fedoraproject.org>"
+ Fingerprint: 8c3b e96a f230 9184 da5c 0dae 3b49 df2a 0608 b895
+ Package    : epel-release-6-8.9.amzn1.noarch (installed)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:libuv-0.10.34-1.el6.x86_64                                                                                                        1/2
+  Installing : nodejs-0.10.48-3.el6.x86_64                                                                                                         2/2
+  Verifying  : nodejs-0.10.48-3.el6.x86_64                                                                                                         1/2
+  Verifying  : 1:libuv-0.10.34-1.el6.x86_64
+
+Installed:
+  nodejs.x86_64 0:0.10.48-3.el6
+
+Dependency Installed:
+  libuv.x86_64 1:0.10.34-1.el6
+
+Complete!

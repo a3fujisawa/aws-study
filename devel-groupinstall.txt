@@ -1,4 +1,4 @@
-[ec2-user@ip-172-31-20-19 ~]$ sudo yum -y groupinstall "Development Tools" 
+[ec2-user@ip-172-31-20-19 ~]$ sudo yum -y groupinstall "Development Tools"
 Loaded plugins: priorities, update-motd, upgrade-helper
 amzn-main                                                                                                                       | 2.1 kB  00:00:00     
 amzn-updates                                                                                                                    | 2.5 kB  00:00:00     

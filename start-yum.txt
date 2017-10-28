@@ -8,7 +8,7 @@ https://aws.amazon.com/amazon-linux-ami/2017.09-release-notes/
 1 package(s) needed for security, out of 6 available
 Run "sudo yum update" to apply all updates.
 
-[ec2-user@ip-172-31-20-19 ~]$ sudo -yum yum -y update
+[ec2-user@ip-172-31-20-19 ~]$ sudo yum -y update
 Loaded plugins: priorities, update-motd, upgrade-helper
 amzn-main                                                                                                                       | 2.1 kB  00:00:00     
 amzn-updates                                                                                                                    | 2.5 kB  00:00:00     

@@ -85,8 +85,8 @@ Starting mysqld:  [  OK  ]
 
 [ec2-user@ip-172-31-20-19 ~]$ mysql -u root
 
-mysql> show databases
-    -> ;
+mysql> show databases;
+
 +--------------------+
 | Database           |
 +--------------------+

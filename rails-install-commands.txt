@@ -1,0 +1,59 @@
+[ec2-user@ip-172-31-20-19 ~]$ ruby -v ruby 2.0.0p648 (2015-12-16) [x86_64-linux]
+
+[ec2-user@ip-172-31-20-19 root]$ sudo su -
+
+[root@ip-172-31-20-19 ~]# git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv
+
+[root@ip-172-31-20-19 ~]# cp -p /etc/profile /etc/profile.ORG
+
+[root@ip-172-31-20-19 ~]# diff /etc/profile /etc/profile.ORG
+
+[root@ip-172-31-20-19 ~]# echo 'export RBENV_ROOT="/usr/local/rbenv"' >> /etc/profile
+
+[root@ip-172-31-20-19 ~]# echo 'export PATH="${RBENV_ROOT}/bin:${PATH}"' >> /etc/profile
+
+[root@ip-172-31-20-19 ~]# echo 'eval "$(rbenv init -)"' >> /etc/profile
+
+[root@ip-172-31-20-19 ~]# source /etc/profile
+
+[root@ip-172-31-20-19 ~]# env | grep RBENV RBENV_ROOT=/usr/local/rbenv RBENV_SHELL=bash
+
+[root@ip-172-31-20-19 ~]# rbenv --version rbenv 1.1.1-6-g2d7cefe
+
+[root@ip-172-31-20-19 ~]# git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build
+
+[root@ip-172-31-20-19 ~]# yum -y install gcc-c++ glibc-headers openssl-dev el readline libyaml-devel readline-devel zlib zlib-devel libffi-devel libx ml2 libxslt libxml2-devel libxslt-devel sqlite-devel
+
+[root@ip-172-31-20-19 ~]# rbenv install -v 2.4.0
+
+[root@ip-172-31-25-251 ~]# rbenv rehash
+
+[root@ip-172-31-25-251 ~]# rbenv global 2.4.0
+
+[root@ip-172-31-25-251 ~]# ruby -v ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-linux]
+
+[root@ip-172-31-25-251 ~]# gem update --system
+
+[root@ip-172-31-25-251 ~]# gem install rails io-console --no-rdoc --no-ri
+
+[root@ip-172-31-25-251 ~]# rails -v Rails 5.1.4
+
+[root@ip-172-31-25-251 ~]# rails new my-app --database=mysql --skip-git --skip-javascript --skip-spring --skip-test-nunit
+
+[root@ip-172-31-25-251 ~]# cd my-app
+
+[root@ip-172-31-25-251 my-app]# rake db:create
+
+[root@ip-172-31-25-251 my-app]# rake db:migrate
+
+[root@ip-172-31-25-251 my-app]# rails server -b 0.0.0.0
+
+[root@ip-172-31-25-251 my-app]# echo "gem 'io-console'" >> Gemfile
+
+[root@ip-172-31-25-251 my-app]# bundle install
+
+[root@ip-172-31-25-251 my-app]# rails generate scaffold book name:string price:decimal
+
+[root@ip-172-31-25-251 my-app]# rake db:migrate
+
+[root@ip-172-31-25-251 my-app]# rails server -b 0.0.0.0

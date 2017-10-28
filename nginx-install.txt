@@ -36,3 +36,6 @@ Dependency Installed:
   gperftools-libs.x86_64 0:2.0-11.5.amzn1                                       libunwind.x86_64 0:1.1-10.8.amzn1                                      
 
 Complete!
+
+[ec2-user@ip-172-31-25-251 ~]$ sudo service nginx start
+Starting nginx:                                            [  OK  ]

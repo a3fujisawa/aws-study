@@ -40,8 +40,8 @@ Resolving deltas: 100% (1645/1645), done.
 
 [root@ip-172-31-20-19 ~]# cp -p /etc/profile /etc/profile.ORG
 [root@ip-172-31-20-19 ~]# diff /etc/profile /etc/profile.ORG
-[root@ip-172-31-20-19 ~]# echo 'export RBENV_ROOT="/usr/local/rbenv"' >> /etc/pr ofile
-[root@ip-172-31-20-19 ~]# echo 'export PATH="${RBENV_ROOT}/bin:${PATH}"' >> /etc /profile
+[root@ip-172-31-20-19 ~]# echo 'export RBENV_ROOT="/usr/local/rbenv"' >> /etc/profile
+[root@ip-172-31-20-19 ~]# echo 'export PATH="${RBENV_ROOT}/bin:${PATH}"' >> /etc/profile
 [root@ip-172-31-20-19 ~]# echo 'eval "$(rbenv init -)"' >> /etc/profile
 [root@ip-172-31-20-19 ~]# source /etc/profile
 
@@ -249,7 +249,7 @@ Installed ruby-2.4.0 to /usr/local/rbenv/versions/2.4.0
 [root@ip-172-31-20-19 ~]# ruby -v
 ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-linux]
 
-[root@ip-172-31-20-19 ~]# gem update --sytemstem
+[root@ip-172-31-20-19 ~]# gem update --system
 Updating rubygems-update
 
 Fetching: rails-5.1.4.gem (100%)
