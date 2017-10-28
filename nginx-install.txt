@@ -1,0 +1,38 @@
+[ec2-user@ip-172-31-20-19 ~]$ sudo yum -y install nginx
+Loaded plugins: priorities, update-motd, upgrade-helper
+Resolving Dependencies
+--> Running transaction check
+---> Package nginx.x86_64 1:1.12.1-1.33.amzn1 will be installed
+--> Processing Dependency: libprofiler.so.0()(64bit) for package: 1:nginx-1.12.1-1.33.amzn1.x86_64
+--> Running transaction check
+---> Package gperftools-libs.x86_64 0:2.0-11.5.amzn1 will be installed
+--> Processing Dependency: libunwind.so.8()(64bit) for package: gperftools-libs-2.0-11.5.amzn1.x86_64
+--> Running transaction check
+---> Package libunwind.x86_64 0:1.1-10.8.amzn1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=======================================================================================================================================================
+ Package                               Arch                         Version                                      Repository                       Size
+=======================================================================================================================================================
+Installing:
+ nginx                                 x86_64                       1:1.12.1-1.33.amzn1                          amzn-main                       561 k
+Installing for dependencies:
+ gperftools-libs                       x86_64                       2.0-11.5.amzn1                               amzn-main                       570 k
+ libunwind                             x86_64                       1.1-10.8.amzn1                               amzn-main                        72 k
+
+Transaction Summary
+=======================================================================================================================================================
+Install  1 Package (+2 Dependent packages)
+
+Total download size: 1.2 M
+Installed size: 2.9 M
+
+Installed:
+  nginx.x86_64 1:1.12.1-1.33.amzn1                                                                                                                     
+
+Dependency Installed:
+  gperftools-libs.x86_64 0:2.0-11.5.amzn1                                       libunwind.x86_64 0:1.1-10.8.amzn1                                      
+
+Complete!
