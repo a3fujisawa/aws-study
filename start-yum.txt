@@ -1,0 +1,58 @@
+Last login: Fri Oct 27 12:32:18 2017 from 172.31.27.127
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-ami/2017.09-release-notes/
+1 package(s) needed for security, out of 6 available
+Run "sudo yum update" to apply all updates.
+
+[ec2-user@ip-172-31-20-19 ~]$ sudo -yum yum -y update
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main                                                                                                                       | 2.1 kB  00:00:00     
+amzn-updates                                                                                                                    | 2.5 kB  00:00:00     
+Resolving Dependencies
+--> Running transaction check
+---> Package amazon-ssm-agent.x86_64 0:2.1.4.0-1.amzn1 will be updated
+---> Package amazon-ssm-agent.x86_64 0:2.2.45.0-1.amzn1 will be an update
+---> Package aws-cfn-bootstrap.noarch 0:1.4-23.15.amzn1 will be updated
+---> Package aws-cfn-bootstrap.noarch 0:1.4-24.16.amzn1 will be an update
+---> Package curl.x86_64 0:7.51.0-9.76.amzn1 will be updated
+---> Package curl.x86_64 0:7.53.1-10.77.amzn1 will be an update
+---> Package kernel.x86_64 0:4.9.58-18.51.amzn1 will be installed
+---> Package krb5-libs.x86_64 0:1.14.1-27.41.amzn1 will be updated
+---> Package krb5-libs.x86_64 0:1.15.1-8.43.amzn1 will be an update
+---> Package libcurl.x86_64 0:7.51.0-9.76.amzn1 will be updated
+---> Package libcurl.x86_64 0:7.53.1-10.77.amzn1 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=======================================================================================================================================================
+ Package                                Arch                        Version                                    Repository                         Size
+=======================================================================================================================================================
+Installing:
+ kernel                                 x86_64                      4.9.58-18.51.amzn1                         amzn-updates                       18 M
+Updating:
+ amazon-ssm-agent                       x86_64                      2.2.45.0-1.amzn1                           amzn-updates                       10 M
+ aws-cfn-bootstrap                      noarch                      1.4-24.16.amzn1                            amzn-updates                      872 k
+ curl                                   x86_64                      7.53.1-10.77.amzn1                         amzn-updates                      329 k
+ krb5-libs                              x86_64                      1.15.1-8.43.amzn1                          amzn-updates                      860 k
+ libcurl                                x86_64                      7.53.1-10.77.amzn1                         amzn-updates                      284 k
+
+Transaction Summary
+=======================================================================================================================================================
+Install  1 Package
+Upgrade  5 Packages
+
+Total download size: 30 M
+
+Installed:
+  kernel.x86_64 0:4.9.58-18.51.amzn1                                                                                                                   
+
+Updated:
+  amazon-ssm-agent.x86_64 0:2.2.45.0-1.amzn1           aws-cfn-bootstrap.noarch 0:1.4-24.16.amzn1           curl.x86_64 0:7.53.1-10.77.amzn1          
+  krb5-libs.x86_64 0:1.15.1-8.43.amzn1                 libcurl.x86_64 0:7.53.1-10.77.amzn1                 
+
+Complete!
