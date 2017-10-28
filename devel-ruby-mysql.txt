@@ -1,0 +1,41 @@
+[ec2-user@ip-172-31-20-19 ~]$ sudo yum -y install ruby-devel mysql-devel
+Loaded plugins: priorities, update-motd, upgrade-helper
+Resolving Dependencies
+
+Installed:
+  mysql-devel.noarch 0:5.5-1.6.amzn1                                         ruby-devel.noarch 1:2.0-0.3.amzn1                                        
+
+Dependency Installed:
+  keyutils-libs-devel.x86_64 0:1.5.8-3.12.amzn1      krb5-devel.x86_64 0:1.15.1-8.43.amzn1            libcom_err-devel.x86_64 0:1.42.12-4.40.amzn1     
+  libkadm5.x86_64 0:1.15.1-8.43.amzn1                libselinux-devel.x86_64 0:2.1.10-3.22.amzn1      libsepol-devel.x86_64 0:2.1.7-3.12.amzn1         
+  libverto-devel.x86_64 0:0.2.5-4.9.amzn1            mysql55-devel.x86_64 0:5.5.57-1.18.amzn1         openssl-devel.x86_64 1:1.0.2k-7.103.amzn1        
+  ruby20-devel.x86_64 0:2.0.0.648-1.29.amzn1         zlib-devel.x86_64 0:1.2.8-7.18.amzn1            
+
+Complete!
+
+[ec2-user@ip-172-31-20-19 ~]$ sudo yum -y install --enablerepo=epel install nodejs
+
+Dependencies Resolved
+
+=======================================================================================================================================================
+ Package                           Arch                              Version                                     Repository                       Size
+=======================================================================================================================================================
+Installing:
+ nodejs                            x86_64                            0.10.48-3.el6                               epel                            2.1 M
+Installing for dependencies:
+ libuv                             x86_64                            1:0.10.34-1.el6                             epel                             57 k
+
+Transaction Summary
+=======================================================================================================================================================
+Install  1 Package (+1 Dependent package)
+
+Total download size: 2.2 M
+Installed size: 7.2 M
+
+Installed:
+  nodejs.x86_64 0:0.10.48-3.el6                                                                                                                        
+
+Dependency Installed:
+  libuv.x86_64 1:0.10.34-1.el6                                                                                                                         
+
+Complete!

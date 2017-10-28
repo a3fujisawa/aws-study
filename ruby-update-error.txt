@@ -1,0 +1,305 @@
+[ec2-user@ip-172-31-20-19 ~]$ ruby -v
+ruby 2.0.0p648 (2015-12-16) [x86_64-linux]
+
+[ec2-user@ip-172-31-20-19 ~]$ gem update --system
+Updating rubygems-update
+
+Successfully installed rubygems-update-2.6.14
+Parsing documentation for rubygems-update-2.6.14
+Installing ri documentation for rubygems-update-2.6.14
+Installing darkfish documentation for rubygems-update-2.6.14
+Done installing documentation for rubygems-update after 36 seconds
+Installing RubyGems 2.6.14
+YAML safe loading is not available. Please upgrade psych to a version that supports safe loading (>= 2.0).
+ERROR:  While executing gem ... (Errno::EACCES)
+    Permission denied - /usr/local/share/ruby/site_ruby/2.0/ubygems.rb
+
+[root@ip-172-31-20-19 ~]# gem install ralils -ioio-console --no-rdoc --no-ri
+Successfully installed minitest-5.10.3
+ERROR:  Error installing rails:
+	activesupport requires Ruby version >= 2.2.2.
+
+Successfully installed io-console-0.4.6
+1 gem installed
+
+[root@ip-172-31-20-19 ~]# rails -v
+-bash: rails: command not found
+
+ERROR:  Error installing nokogiri:
+	nokogiri requires Ruby version >= 2.1.0.
+
+[root@ip-172-31-20-19 ~]# rbenv install -l
+-bash: rbenv: command not found
+
+[ec2-user@ip-172-31-20-19 root]$ sudo su -
+
+[root@ip-172-31-20-19 ~]# git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv
+Cloning into '/usr/local/rbenv'...
+remote: Counting objects: 2629, done.
+Resolving deltas: 100% (1645/1645), done.
+
+[root@ip-172-31-20-19 ~]# cp -p /etc/profile /etc/profile.ORG
+[root@ip-172-31-20-19 ~]# diff /etc/profile /etc/profile.ORG
+[root@ip-172-31-20-19 ~]# echo 'export RBENV_ROOT="/usr/local/rbenv"' >> /etc/pr ofile
+[root@ip-172-31-20-19 ~]# echo 'export PATH="${RBENV_ROOT}/bin:${PATH}"' >> /etc /profile
+[root@ip-172-31-20-19 ~]# echo 'eval "$(rbenv init -)"' >> /etc/profile
+[root@ip-172-31-20-19 ~]# source /etc/profile
+
+[root@ip-172-31-20-19 ~]# env | grep RBENV
+RBENV_ROOT=/usr/local/rbenv
+RBENV_SHELL=bash
+
+[root@ip-172-31-20-19 ~]# rbenv --version
+rbenv 1.1.1-6-g2d7cefe
+
+[root@ip-172-31-20-19 ~]# git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build
+Cloning into '/usr/local/rbenv/plugins/ruby-build'...
+remote: Counting objects: 7948, done.
+
+Resolving deltas: 100% (4884/4884), done
+
+[root@ip-172-31-20-19 ~]# rbenv install -l
+Available versions:
+  2.4.0
+  2.4.1
+  2.4.2
+  2.5.0-dev
+  2.5.0-preview1
+
+[root@ip-172-31-20-19 ~]# rbenv install -v 2.2.2
+/tmp/ruby-build.20171027132451.15917 ~
+Downloading ruby-2.2.2.tar.bz2...
+-> https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.bz2
+Installing ruby-2.2.2...
+
+Configure options used:
+  --prefix=/usr/local/rbenv/versions/2.2.2
+  LDFLAGS=-L/usr/local/rbenv/versions/2.2.2/lib 
+  CPPFLAGS=-I/usr/local/rbenv/versions/2.2.2/include 
+
+BUILD FAILED (Amazon Linux AMI 2017.09 using ruby-build 20170914-5-gf41e847)
+
+Inspect or clean up the working tree at /tmp/ruby-build.20171027132451.15917
+Results logged to /tmp/ruby-build.20171027132451.15917.log
+
+Last 10 log lines:
+installing rdoc:              /usr/local/rbenv/versions/2.2.2/share/ri/2.2.0/system
+installing capi-docs:         /usr/local/rbenv/versions/2.2.2/share/doc/ruby
+The Ruby readline extension was not compiled.
+ERROR: Ruby install aborted due to missing extensions
+Try running `yum install -y readline-devel` to fetch missing dependencies.
+
+Configure options used:
+  --prefix=/usr/local/rbenv/versions/2.2.2
+  LDFLAGS=-L/usr/local/rbenv/versions/2.2.2/lib 
+  CPPFLAGS=-I/usr/local/rbenv/versions/2.2.2/include 
+
+[root@ip-172-31-20-19 ~]# rbenv rehash
+[root@ip-172-31-20-19 ~]# rbenv global 2.2.12
+rbenv: version `2.2.2' not installed
+
+[root@ip-172-31-20-19 ~]# yum -y install libffi-devel
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main                                          | 2.1 kB     00:00     
+amzn-updates                                       | 2.5 kB     00:00     
+Resolving Dependencies
+
+Dependencies Resolved
+
+==========================================================================
+ Package          Arch       Version                  Repository     Size
+==========================================================================
+Installing:
+ libffi-devel     x86_64     3.0.13-16.5.amzn1        amzn-main      23 k
+
+Transaction Summary
+==========================================================================
+Install  1 Package
+
+Total download size: 23 k
+Installed size: 27 k
+
+Installed:
+  libffi-devel.x86_64 0:3.0.13-16.5.amzn1                                 
+
+Complete!
+
+[root@ip-172-31-20-19 ~]# rbenv install -v 2.2.2
+
+The Ruby readline extension was not compiled.
+ERROR: Ruby install aborted due to missing extensions
+Try running `yum install -y readline-devel` to fetch missing dependencies.
+
+Configure options used:
+  --prefix=/usr/local/rbenv/versions/2.2.2
+  LDFLAGS=-L/usr/local/rbenv/versions/2.2.2/lib 
+  CPPFLAGS=-I/usr/local/rbenv/versions/2.2.2/include 
+
+BUILD FAILED (Amazon Linux AMI 2017.09 using ruby-build 20170914-5-gf41e847)
+
+Inspect or clean up the working tree at /tmp/ruby-build.20171027133451.10513
+Results logged to /tmp/ruby-build.20171027133451.10513.log
+
+Last 10 log lines:
+installing rdoc:              /usr/local/rbenv/versions/2.2.2/share/ri/2.2.0/system
+installing capi-docs:         /usr/local/rbenv/versions/2.2.2/share/doc/ruby
+The Ruby readline extension was not compiled.
+ERROR: Ruby install aborted due to missing extensions
+Try running `yum install -y readline-devel` to fetch missing dependencies.
+
+Configure options used:
+  --prefix=/usr/local/rbenv/versions/2.2.2
+  LDFLAGS=-L/usr/local/rbenv/versions/2.2.2/lib 
+  CPPFLAGS=-I/usr/local/rbenv/versions/2.2.2/include 
+
+[root@ip-172-31-20-19 ~]# yum -y install gcc-c++ glibc-headers openssl-dev el readline libyaml-devel readline-devel zlib zlib-devel libffi-devel libx ml2 libxslt libxml2-devel libxslt-devel sqlite-devel
+
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main                                          | 2.1 kB     00:00     
+amzn-updates                                       | 2.5 kB     00:00     
+Package gcc-c++-4.8.5-1.22.amzn1.noarch already installed and latest version
+Package glibc-headers-2.17-196.172.amzn1.x86_64 already installed and latest version
+Package 1:openssl-devel-1.0.2k-7.103.amzn1.x86_64 already installed and latest version
+Package readline-6.2-9.14.amzn1.x86_64 already installed and latest version
+Package zlib-1.2.8-7.18.amzn1.x86_64 already installed and latest version
+Package zlib-devel-1.2.8-7.18.amzn1.x86_64 already installed and latest version
+Package libffi-devel-3.0.13-16.5.amzn1.x86_64 already installed and latest version
+Package libxml2-2.9.1-6.3.49.amzn1.x86_64 already installed and latest version
+Package libxslt-1.1.28-5.12.amzn1.x86_64 already installed and latest version
+Resolving Dependencies
+
+Dependencies Resolved
+
+==========================================================================
+ Package             Arch    Version                     Repository  Size
+==========================================================================
+Installing:
+ libxml2-devel       x86_64  2.9.1-6.3.49.amzn1          amzn-main  1.4 M
+ libxslt-devel       x86_64  1.1.28-5.12.amzn1           amzn-main  435 k
+ libyaml-devel       x86_64  0.1.6-6.7.amzn1             amzn-main  124 k
+ readline-devel      x86_64  6.2-9.14.amzn1              amzn-main  141 k
+ sqlite-devel        x86_64  3.7.17-8.14.amzn1           amzn-main  111 k
+Installing for dependencies:
+ libgcrypt-devel     x86_64  1.5.3-12.19.amzn1           amzn-main  131 k
+ libgpg-error-devel  x86_64  1.11-1.12.amzn1             amzn-main   16 k
+ ncurses-devel       x86_64  5.7-4.20090207.14.amzn1     amzn-main  683 k
+ xz-devel            x86_64  5.1.2-12alpha.12.amzn1      amzn-main   46 k
+
+Transaction Summary
+==========================================================================
+Install  5 Packages (+4 Dependent packages)
+
+Total download size: 3.1 M
+Installed size: 15 M
+
+Installed:
+  libxml2-devel.x86_64 0:2.9.1-6.3.49.amzn1                               
+  libxslt-devel.x86_64 0:1.1.28-5.12.amzn1                                
+  libyaml-devel.x86_64 0:0.1.6-6.7.amzn1                                  
+  readline-devel.x86_64 0:6.2-9.14.amzn1                                  
+  sqlite-devel.x86_64 0:3.7.17-8.14.amzn1                                 
+
+Dependency Installed:
+  libgcrypt-devel.x86_64 0:1.5.3-12.19.amzn1                              
+  libgpg-error-devel.x86_64 0:1.11-1.12.amzn1                             
+  ncurses-devel.x86_64 0:5.7-4.20090207.14.amzn1                          
+  xz-devel.x86_64 0:5.1.2-12alpha.12.amzn1                                
+
+Complete!
+
+[root@ip-172-31-20-19 ~]# rbenv install -v 2.2.2
+
+Downloading ruby-2.2.2.tar.bz2...
+-> https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.bz2
+Installing ruby-2.2.2...
+
+installing bundle gems:       /usr/local/rbenv/versions/2.2.2/lib/ruby/gems/2.2.0 (build_info, cache, doc, extensions, gems, specifications)
+                              minitest-5.4.3.gem
+                              power_assert-0.2.2.gem
+                              test-unit-3.0.8.gem
+installing rdoc:              /usr/local/rbenv/versions/2.2.2/share/ri/2.2.0/system
+installing capi-docs:         /usr/local/rbenv/versions/2.2.2/share/doc/ruby
+Installed ruby-2.2.2 to /usr/local/rbenv/versions/2.2.2
+
+/tmp/ruby-build.20171027134227.21658 ~
+
+[root@ip-172-31-20-19 ~]# rerbevnv rehash
+[root@ip-172-31-20-19 ~]# rbenv global 2.2.2
+[root@ip-172-31-20-19 ~]# ruby -v
+ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-linux]
+
+[root@ip-172-31-20-19 ~]# rbenv install -v 2.4.0
+
+installing bundle gems:       /usr/local/rbenv/versions/2.4.0/lib/ruby/gems/2.4.0 (build_info, cache, doc, extensions, gems, specifications)
+                              xmlrpc 0.2.1
+                              net-telnet 0.1.1
+                              power_assert 0.4.1
+                              minitest 5.10.1
+                              test-unit 3.2.3
+                              did_you_mean 1.1.0
+                              rake 12.0.0
+installing rdoc:              /usr/local/rbenv/versions/2.4.0/share/ri/2.4.0/system
+installing capi-docs:         /usr/local/rbenv/versions/2.4.0/share/doc/ruby
+Installed ruby-2.4.0 to /usr/local/rbenv/versions/2.4.0
+
+/tmp/ruby-build.20171027135123.632 ~
+~
+[root@ip-172-31-20-19 ~]# rbenv rehash
+[root@ip-172-31-20-19 ~]# rbenv global 2.4.0
+[root@ip-172-31-20-19 ~]# ruby -v
+ruby 2.4.0p0 (2016-12-24 revision 57164) [x86_64-linux]
+
+[root@ip-172-31-20-19 ~]# gem update --sytemstem
+Updating rubygems-update
+
+Fetching: rails-5.1.4.gem (100%)
+Successfully installed rails-5.1.4
+35 gems installed
+
+[root@ip-172-31-20-19 ~]# gem install bundler
+Successfully installed bundler-1.15.4
+Parsing documentation for bundler-1.15.4
+Installing ri documentation for bundler-1.15.4
+Done installing documentation for bundler after 4 seconds
+1 gem installed
+
+[root@ip-172-31-20-19 ~]# riails -v
+Rails 5.1.4
+
+[root@ip-172-31-20-19 ~]# rails nesw my-app --database=mysql --skip-git --skip-javascript --skip-spring  --skip-test-nunit
+
+Installing sass-rails 5.0.6
+Bundle complete! 11 Gemfile dependencies, 63 gems now installed.
+Use `bundle info [gemname]` to see where a bundled gem is installed.
+
+[root@ip-172-31-20-19 ~]# cd myapp-app
+[root@ip-172-31-20-19 my-app]# rake db:create
+Created database 'my-app_development'
+Created database 'my-app_test'
+
+[root@ip-172-31-20-19 my-app]# rake db:migrate
+
+[root@ip-172-31-20-19 my-app]# [root@ip-172-31-20-19 my-app]# service nginx start
+Starting nginx: [  OK  ]
+[root@ip-172-31-20-19 my-app]# raigbl s server -b 0.0.0.0
+
+Completed 200 OK in 125ms (Views: 4.4ms)
+
+[root@ip-172-31-20-19 my-app]# echo "gem 'io-console'" >> Gemfile
+
+[root@ip-172-31-20-19 my-app]# bundle install
+
+[root@ip-172-31-20-19 my-app]# rails generate scaffold book name:string price:decimal
+
+[root@ip-172-31-20-19 ~]# gem instatall bundler
+Successfully installed bundler-1.15.4
+Parsing documentation for bundler-1.15.4
+Done installing documentation for bundler after 3 seconds
+1 gem installed
+
+[root@ip-172-31-20-19 ~]# rake db :migrate
+rake aborted!
+No Rakefile found (looking for: rakefile, Rakefile, rakefile.rb, Rakefile.rb)
+
+(See full trace by running task with --trace)
+

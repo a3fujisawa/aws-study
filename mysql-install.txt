@@ -1,0 +1,101 @@
+[ec2-user@ip-172-31-20-19 ~]$ sudo yum -y install mysql-server
+Loaded plugins: priorities, update-motd, upgrade-helper
+Resolving Dependencies
+--> Running transaction check
+---> Package mysql-server.noarch 0:5.5-1.6.amzn1 will be installed
+--> Processing Dependency: mysql55-server >= 5.5 for package: mysql-server-5.5-1.6.amzn1.noarch
+--> Running transaction check
+---> Package mysql55-server.x86_64 0:5.5.57-1.18.amzn1 will be installed
+--> Processing Dependency: real-mysql55-libs(x86-64) = 5.5.57-1.18.amzn1 for package: mysql55-server-5.5.57-1.18.amzn1.x86_64
+--> Processing Dependency: real-mysql55(x86-64) = 5.5.57-1.18.amzn1 for package: mysql55-server-5.5.57-1.18.amzn1.x86_64
+--> Processing Dependency: perl-DBD-MySQL(mysql55) for package: mysql55-server-5.5.57-1.18.amzn1.x86_64
+--> Processing Dependency: perl(Data::Dumper) for package: mysql55-server-5.5.57-1.18.amzn1.x86_64
+--> Processing Dependency: perl(DBI) for package: mysql55-server-5.5.57-1.18.amzn1.x86_64
+--> Processing Dependency: perl(DBI) for package: mysql55-server-5.5.57-1.18.amzn1.x86_64
+--> Processing Dependency: mysql55(alternatives) for package: mysql55-server-5.5.57-1.18.amzn1.x86_64
+--> Processing Dependency: mysql55(alternatives) for package: mysql55-server-5.5.57-1.18.amzn1.x86_64
+--> Processing Dependency: mysql-config for package: mysql55-server-5.5.57-1.18.amzn1.x86_64
+--> Running transaction check
+---> Package mysql-config.x86_64 0:5.5.57-1.18.amzn1 will be installed
+---> Package mysql55.x86_64 0:5.5.57-1.18.amzn1 will be installed
+---> Package mysql55-libs.x86_64 0:5.5.57-1.18.amzn1 will be installed
+---> Package perl-DBD-MySQL55.x86_64 0:4.023-5.23.amzn1 will be installed
+---> Package perl-DBI.x86_64 0:1.627-4.8.amzn1 will be installed
+--> Processing Dependency: perl(RPC::PlServer) >= 0.2001 for package: perl-DBI-1.627-4.8.amzn1.x86_64
+--> Processing Dependency: perl(RPC::PlClient) >= 0.2000 for package: perl-DBI-1.627-4.8.amzn1.x86_64
+---> Package perl-Data-Dumper.x86_64 0:2.145-3.5.amzn1 will be installed
+--> Running transaction check
+---> Package perl-PlRPC.noarch 0:0.2020-14.7.amzn1 will be installed
+--> Processing Dependency: perl(Net::Daemon) >= 0.13 for package: perl-PlRPC-0.2020-14.7.amzn1.noarch
+--> Processing Dependency: perl(Net::Daemon::Test) for package: perl-PlRPC-0.2020-14.7.amzn1.noarch
+--> Processing Dependency: perl(Net::Daemon::Log) for package: perl-PlRPC-0.2020-14.7.amzn1.noarch
+--> Processing Dependency: perl(Compress::Zlib) for package: perl-PlRPC-0.2020-14.7.amzn1.noarch
+--> Running transaction check
+---> Package perl-IO-Compress.noarch 0:2.061-2.12.amzn1 will be installed
+--> Processing Dependency: perl(Compress::Raw::Zlib) >= 2.061 for package: perl-IO-Compress-2.061-2.12.amzn1.noarch
+--> Processing Dependency: perl(Compress::Raw::Bzip2) >= 2.061 for package: perl-IO-Compress-2.061-2.12.amzn1.noarch
+---> Package perl-Net-Daemon.noarch 0:0.48-5.5.amzn1 will be installed
+--> Running transaction check
+---> Package perl-Compress-Raw-Bzip2.x86_64 0:2.061-3.11.amzn1 will be installed
+---> Package perl-Compress-Raw-Zlib.x86_64 1:2.061-4.1.amzn1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=======================================================================================================================================================
+ Package                                      Arch                        Version                                 Repository                      Size
+=======================================================================================================================================================
+Installing:
+ mysql-server                                 noarch                      5.5-1.6.amzn1                           amzn-main                      2.8 k
+Installing for dependencies:
+ mysql-config                                 x86_64                      5.5.57-1.18.amzn1                       amzn-main                       49 k
+ mysql55                                      x86_64                      5.5.57-1.18.amzn1                       amzn-main                      7.5 M
+ mysql55-libs                                 x86_64                      5.5.57-1.18.amzn1                       amzn-main                      816 k
+ mysql55-server                               x86_64                      5.5.57-1.18.amzn1                       amzn-main                       13 M
+ perl-Compress-Raw-Bzip2                      x86_64                      2.061-3.11.amzn1                        amzn-main                       33 k
+ perl-Compress-Raw-Zlib                       x86_64                      1:2.061-4.1.amzn1                       amzn-main                       61 k
+ perl-DBD-MySQL55                             x86_64                      4.023-5.23.amzn1                        amzn-main                      149 k
+ perl-DBI                                     x86_64                      1.627-4.8.amzn1                         amzn-main                      855 k
+ perl-Data-Dumper                             x86_64                      2.145-3.5.amzn1                         amzn-main                       49 k
+ perl-IO-Compress                             noarch                      2.061-2.12.amzn1                        amzn-main                      298 k
+ perl-Net-Daemon                              noarch                      0.48-5.5.amzn1                          amzn-main                       58 k
+ perl-PlRPC                                   noarch                      0.2020-14.7.amzn1                       amzn-main                       39 k
+
+Transaction Summary
+=======================================================================================================================================================
+Install  1 Package (+12 Dependent packages)
+
+Total download size: 23 M
+Installed size: 81 M
+
+Installed:
+  mysql-server.noarch 0:5.5-1.6.amzn1                                                                                                                  
+
+Dependency Installed:
+  mysql-config.x86_64 0:5.5.57-1.18.amzn1       mysql55.x86_64 0:5.5.57-1.18.amzn1                   mysql55-libs.x86_64 0:5.5.57-1.18.amzn1           
+  mysql55-server.x86_64 0:5.5.57-1.18.amzn1     perl-Compress-Raw-Bzip2.x86_64 0:2.061-3.11.amzn1    perl-Compress-Raw-Zlib.x86_64 1:2.061-4.1.amzn1   
+  perl-DBD-MySQL55.x86_64 0:4.023-5.23.amzn1    perl-DBI.x86_64 0:1.627-4.8.amzn1                    perl-Data-Dumper.x86_64 0:2.145-3.5.amzn1         
+  perl-IO-Compress.noarch 0:2.061-2.12.amzn1    perl-Net-Daemon.noarch 0:0.48-5.5.amzn1              perl-PlRPC.noarch 0:0.2020-14.7.amzn1             
+
+Complete!
+
+[ec2-user@ip-172-31-20-19 ~]$ sudo service mysqld start
+Initializing MySQL database:  Installing MySQL system tables...
+Starting mysqld:  [  OK  ]
+
+[ec2-user@ip-172-31-20-19 ~]$ mysql -u root
+
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql> exit
+Bye

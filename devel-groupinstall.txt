@@ -1,0 +1,129 @@
+[ec2-user@ip-172-31-20-19 ~]$ sudo yum -y groupinstall "Development Tools" 
+Loaded plugins: priorities, update-motd, upgrade-helper
+amzn-main                                                                                                                       | 2.1 kB  00:00:00     
+amzn-updates                                                                                                                    | 2.5 kB  00:00:00     
+Resolving Dependencies
+
+Dependencies Resolved
+
+=======================================================================================================================================================
+ Package                                 Arch                      Version                                       Repository                       Size
+=======================================================================================================================================================
+Installing for group install "Development tools":
+ autoconf                                noarch                    2.69-11.9.amzn1                               amzn-main                       915 k
+ automake                                noarch                    1.13.4-3.15.amzn1                             amzn-main                       718 k
+ bison                                   x86_64                    2.7-4.11.amzn1                                amzn-main                       645 k
+ byacc                                   x86_64                    1.9.20070509-7.8.amzn1                        amzn-main                        52 k
+ crash                                   x86_64                    7.1.8-1.21.amzn1                              amzn-main                       2.9 M
+ cscope                                  x86_64                    15.6-6.5.amzn1                                amzn-main                       148 k
+ ctags                                   x86_64                    5.8-2.6.amzn1                                 amzn-main                       156 k
+ cvs                                     x86_64                    1.11.23-16.9.amzn1                            amzn-main                       753 k
+ diffstat                                x86_64                    1.51-2.5.amzn1                                amzn-main                        27 k
+ doxygen                                 x86_64                    1:1.8.2-1.11.amzn1                            amzn-main                       4.7 M
+ elfutils                                x86_64                    0.163-3.18.amzn1                              amzn-main                       308 k
+ flex                                    x86_64                    2.5.37-3.13.amzn1                             amzn-main                       325 k
+ gcc                                     noarch                    4.8.5-1.22.amzn1                              amzn-main                       4.1 k
+ gcc-c++                                 noarch                    4.8.5-1.22.amzn1                              amzn-main                       4.0 k
+ gcc-gfortran                            noarch                    4.8.5-1.22.amzn1                              amzn-main                       3.8 k
+ gdb                                     x86_64                    7.6.1-64.33.amzn1                             amzn-main                       2.6 M
+ gettext                                 x86_64                    0.18.1.1-9.1.11.amzn1                         amzn-main                       1.6 M
+ git                                     x86_64                    2.13.6-1.55.amzn1                             amzn-updates                     11 M
+ indent                                  x86_64                    2.2.10-7.6.amzn1                              amzn-main                       123 k
+ intltool                                noarch                    0.41.0-1.1.5.amzn1                            amzn-main                        56 k
+ kexec-tools                             x86_64                    2.0.0-273.11.amzn1                            amzn-main                       370 k
+ latrace                                 x86_64                    0.5.9-2.2.amzn1                               amzn-main                       152 k
+ libtool                                 x86_64                    2.4.2-20.4.8.5.32.amzn1                       amzn-main                       737 k
+ ltrace                                  x86_64                    0.5-23.45svn.6.amzn1                          amzn-main                        79 k
+ patch                                   x86_64                    2.7.1-8.9.amzn1                               amzn-main                       113 k
+ patchutils                              x86_64                    0.3.1-3.1.5.amzn1                             amzn-main                       113 k
+ rcs                                     x86_64                    5.7-37.7.amzn1                                amzn-main                       357 k
+ rpm-build                               x86_64                    4.11.3-21.75.amzn1                            amzn-main                       155 k
+ strace                                  x86_64                    4.8-11.16.amzn1                               amzn-main                       319 k
+ subversion                              x86_64                    1.9.7-1.58.amzn1                              amzn-main                       1.6 M
+ swig                                    x86_64                    2.0.10-4.24.amzn1                             amzn-main                       1.4 M
+ system-rpm-config                       noarch                    9.0.3-42.28.amzn1                             amzn-main                        63 k
+ systemtap                               x86_64                    3.1-2.34.amzn1                                amzn-main                       148 k
+ systemtap-runtime                       x86_64                    3.1-2.34.amzn1                                amzn-main                       476 k
+ texinfo                                 x86_64                    5.1-4.10.amzn1                                amzn-main                       1.2 M
+ valgrind                                x86_64                    1:3.10.0-16.14.amzn1                          amzn-main                        18 M
+Installing for dependencies:
+ apr                                     x86_64                    1.5.1-1.12.amzn1                              amzn-main                       116 k
+ apr-util                                x86_64                    1.4.1-4.17.amzn1                              amzn-main                        87 k
+ avahi-libs                              x86_64                    0.6.25-12.17.amzn1                            amzn-main                        64 k
+ busybox                                 x86_64                    1:1.19.3-2.11.amzn1                           amzn-main                       616 k
+ cpp48                                   x86_64                    4.8.5-11.135.amzn1                            amzn-main                       6.7 M
+ dyninst                                 x86_64                    8.1.2-6.3.amzn1                               amzn-main                       3.1 M
+ elfutils-libs                           x86_64                    0.163-3.18.amzn1                              amzn-main                       286 k
+ gcc48                                   x86_64                    4.8.5-11.135.amzn1                            amzn-main                        18 M
+ gcc48-c++                               x86_64                    4.8.5-11.135.amzn1                            amzn-main                       9.8 M
+ gcc48-gfortran                          x86_64                    4.8.5-11.135.amzn1                            amzn-main                       7.9 M
+ gettext-common-devel                    noarch                    0.18.1.1-9.1.11.amzn1                         amzn-main                       597 k
+ gettext-devel                           x86_64                    0.18.1.1-9.1.11.amzn1                         amzn-main                       162 k
+ gettext-libs                            x86_64                    0.18.1.1-9.1.11.amzn1                         amzn-main                       428 k
+ glibc-devel                             x86_64                    2.17-196.172.amzn1                            amzn-main                       1.1 M
+ glibc-headers                           x86_64                    2.17-196.172.amzn1                            amzn-main                       751 k
+ hardlink                                x86_64                    1:1.0-10.4.amzn1                              amzn-main                       9.6 k
+ kernel-devel                            x86_64                    4.9.58-18.51.amzn1                            amzn-updates                     11 M
+ kernel-headers                          x86_64                    4.9.58-18.51.amzn1                            amzn-updates                    1.1 M
+ libdwarf                                x86_64                    20130207-3.3.amzn1                            amzn-main                       117 k
+ libgcc48                                x86_64                    4.8.5-11.135.amzn1                            amzn-main                       150 k
+ libgfortran                             x86_64                    6.4.1-1.45.amzn1                              amzn-main                       391 k
+ libgomp                                 x86_64                    6.4.1-1.45.amzn1                              amzn-main                       204 k
+ libmpc                                  x86_64                    1.0.1-3.3.amzn1                               amzn-main                        53 k
+ libquadmath                             x86_64                    6.4.1-1.45.amzn1                              amzn-main                       197 k
+ libserf                                 x86_64                    1.3.7-1.7.amzn1                               amzn-main                        64 k
+ libstdc++48                             x86_64                    4.8.5-11.135.amzn1                            amzn-main                       403 k
+ lzo                                     x86_64                    2.08-1.5.amzn1                                amzn-main                        64 k
+ m4                                      x86_64                    1.4.16-9.10.amzn1                             amzn-main                       263 k
+ mpfr                                    x86_64                    3.1.1-4.14.amzn1                              amzn-main                       237 k
+ perl-Error                              noarch                    1:0.17020-2.9.amzn1                           amzn-main                        33 k
+ perl-Git                                noarch                    2.13.6-1.55.amzn1                             amzn-updates                     69 k
+ perl-TermReadKey                        x86_64                    2.30-20.9.amzn1                               amzn-main                        33 k
+ perl-Test-Harness                       noarch                    3.28-3.6.amzn1                                amzn-main                       314 k
+ perl-Text-Unidecode                     noarch                    0.04-20.7.amzn1                               amzn-main                       121 k
+ perl-Thread-Queue                       noarch                    3.02-2.5.amzn1                                amzn-main                        17 k
+ perl-XML-Parser                         x86_64                    2.41-10.9.amzn1                               amzn-main                       277 k
+ perl-libintl                            x86_64                    1.20-12.7.amzn1                               amzn-main                       1.1 M
+ snappy                                  x86_64                    1.0.5-1.1.amzn1                               amzn-main                        36 k
+ subversion-libs                         x86_64                    1.9.7-1.58.amzn1                              amzn-main                       1.7 M
+ systemtap-client                        x86_64                    3.1-2.34.amzn1                                amzn-main                       4.1 M
+ systemtap-devel                         x86_64                    3.1-2.34.amzn1                                amzn-main                       2.9 M
+
+Transaction Summary
+=======================================================================================================================================================
+Install  36 Packages (+41 Dependent packages)
+
+Total download size: 127 M
+Installed size: 316 M
+
+Installed:
+  autoconf.noarch 0:2.69-11.9.amzn1                automake.noarch 0:1.13.4-3.15.amzn1                 bison.x86_64 0:2.7-4.11.amzn1                 
+  byacc.x86_64 0:1.9.20070509-7.8.amzn1            crash.x86_64 0:7.1.8-1.21.amzn1                     cscope.x86_64 0:15.6-6.5.amzn1                
+  ctags.x86_64 0:5.8-2.6.amzn1                     cvs.x86_64 0:1.11.23-16.9.amzn1                     diffstat.x86_64 0:1.51-2.5.amzn1              
+  doxygen.x86_64 1:1.8.2-1.11.amzn1                elfutils.x86_64 0:0.163-3.18.amzn1                  flex.x86_64 0:2.5.37-3.13.amzn1               
+  gcc.noarch 0:4.8.5-1.22.amzn1                    gcc-c++.noarch 0:4.8.5-1.22.amzn1                   gcc-gfortran.noarch 0:4.8.5-1.22.amzn1        
+  gdb.x86_64 0:7.6.1-64.33.amzn1                   gettext.x86_64 0:0.18.1.1-9.1.11.amzn1              git.x86_64 0:2.13.6-1.55.amzn1                
+  indent.x86_64 0:2.2.10-7.6.amzn1                 intltool.noarch 0:0.41.0-1.1.5.amzn1                kexec-tools.x86_64 0:2.0.0-273.11.amzn1       
+  latrace.x86_64 0:0.5.9-2.2.amzn1                 libtool.x86_64 0:2.4.2-20.4.8.5.32.amzn1            ltrace.x86_64 0:0.5-23.45svn.6.amzn1          
+  patch.x86_64 0:2.7.1-8.9.amzn1                   patchutils.x86_64 0:0.3.1-3.1.5.amzn1               rcs.x86_64 0:5.7-37.7.amzn1                   
+  rpm-build.x86_64 0:4.11.3-21.75.amzn1            strace.x86_64 0:4.8-11.16.amzn1                     subversion.x86_64 0:1.9.7-1.58.amzn1          
+  swig.x86_64 0:2.0.10-4.24.amzn1                  system-rpm-config.noarch 0:9.0.3-42.28.amzn1        systemtap.x86_64 0:3.1-2.34.amzn1             
+  systemtap-runtime.x86_64 0:3.1-2.34.amzn1        texinfo.x86_64 0:5.1-4.10.amzn1                     valgrind.x86_64 1:3.10.0-16.14.amzn1          
+
+Dependency Installed:
+  apr.x86_64 0:1.5.1-1.12.amzn1                  apr-util.x86_64 0:1.4.1-4.17.amzn1                    avahi-libs.x86_64 0:0.6.25-12.17.amzn1        
+  busybox.x86_64 1:1.19.3-2.11.amzn1             cpp48.x86_64 0:4.8.5-11.135.amzn1                     dyninst.x86_64 0:8.1.2-6.3.amzn1              
+  elfutils-libs.x86_64 0:0.163-3.18.amzn1        gcc48.x86_64 0:4.8.5-11.135.amzn1                     gcc48-c++.x86_64 0:4.8.5-11.135.amzn1         
+  gcc48-gfortran.x86_64 0:4.8.5-11.135.amzn1     gettext-common-devel.noarch 0:0.18.1.1-9.1.11.amzn1   gettext-devel.x86_64 0:0.18.1.1-9.1.11.amzn1  
+  gettext-libs.x86_64 0:0.18.1.1-9.1.11.amzn1    glibc-devel.x86_64 0:2.17-196.172.amzn1               glibc-headers.x86_64 0:2.17-196.172.amzn1     
+  hardlink.x86_64 1:1.0-10.4.amzn1               kernel-devel.x86_64 0:4.9.58-18.51.amzn1              kernel-headers.x86_64 0:4.9.58-18.51.amzn1    
+  libdwarf.x86_64 0:20130207-3.3.amzn1           libgcc48.x86_64 0:4.8.5-11.135.amzn1                  libgfortran.x86_64 0:6.4.1-1.45.amzn1         
+  libgomp.x86_64 0:6.4.1-1.45.amzn1              libmpc.x86_64 0:1.0.1-3.3.amzn1                       libquadmath.x86_64 0:6.4.1-1.45.amzn1         
+  libserf.x86_64 0:1.3.7-1.7.amzn1               libstdc++48.x86_64 0:4.8.5-11.135.amzn1               lzo.x86_64 0:2.08-1.5.amzn1                   
+  m4.x86_64 0:1.4.16-9.10.amzn1                  mpfr.x86_64 0:3.1.1-4.14.amzn1                        perl-Error.noarch 1:0.17020-2.9.amzn1         
+  perl-Git.noarch 0:2.13.6-1.55.amzn1            perl-TermReadKey.x86_64 0:2.30-20.9.amzn1             perl-Test-Harness.noarch 0:3.28-3.6.amzn1     
+  perl-Text-Unidecode.noarch 0:0.04-20.7.amzn1   perl-Thread-Queue.noarch 0:3.02-2.5.amzn1             perl-XML-Parser.x86_64 0:2.41-10.9.amzn1      
+  perl-libintl.x86_64 0:1.20-12.7.amzn1          snappy.x86_64 0:1.0.5-1.1.amzn1                       subversion-libs.x86_64 0:1.9.7-1.58.amzn1     
+  systemtap-client.x86_64 0:3.1-2.34.amzn1       systemtap-devel.x86_64 0:3.1-2.34.amzn1              
+
+Complete!

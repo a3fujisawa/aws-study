@@ -1,0 +1,9 @@
+[ec2-user@ip-172-31-20-19 ~]$ gem install rails io-console --no-rdoc --no-ri
+Successfully installed minitest-5.10.3
+
+ERROR:  Error installing rails:
+	activesupport requires Ruby version >= 2.2.2.
+Fetching: io-console-0.4.6.gemFetching: io-console-0.4.6.gem ( 73%)Fetching: io-console-0.4.6.gem (100%)Fetching: io-console-0.4.6.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed io-console-0.4.6
+1 gem installed
